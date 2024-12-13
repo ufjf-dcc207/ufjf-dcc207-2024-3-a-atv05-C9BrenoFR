@@ -1,0 +1,6 @@
+.listaFuncionarios{
+    width: fit-content;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
