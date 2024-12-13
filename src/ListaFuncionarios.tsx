@@ -13,6 +13,7 @@ export default function ListaFuncionarios(){
                     setor={funcionario.setor}
                     data_admissao={funcionario.data_admissao}
                     salario_base={funcionario.salario_base}
+                    dependentes={funcionario.dependentes}
                 />
             ))}
         </section>
