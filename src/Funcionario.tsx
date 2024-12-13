@@ -1,11 +1,22 @@
+import "./Funcionario.css"
+
+interface Dependentes{
+    nome: string,
+    data_nascimento: string,
+    abono_salarial: number,
+}
 interface FuncionarioProps {
     nome: string,
     setor: string,
     data_admissao: string,
     salario_base: number,
+    dependentes: Dependentes[],
 }
 
-export default function Funcionario({nome,setor,data_admissao,salario_base}: FuncionarioProps){
+export default function Funcionario({nome,setor,data_admissao,salario_base, dependentes}: FuncionarioProps){
+    dependentes.forEach((dependente) => {
+        salario_base -= dependente.abono_salarial;
+    })
     return (
         <div className="funcionario">
             <h1 className="nome">Nome: {nome}</h1>
